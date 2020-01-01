@@ -274,8 +274,8 @@ AnalyzeObjectLabelMapImageIO::CanReadFile(const char * FileNameToRead)
 void
 AnalyzeObjectLabelMapImageIO::ReadImageInformation()
 {
-  m_ComponentType = CHAR;
-  m_PixelType = SCALAR;
+  m_ComponentType = IOComponentEnum::CHAR;
+  m_PixelType = IOPixelEnum::SCALAR;
   // Opening the file
   std::ifstream inputFileStream;
   inputFileStream.open(m_FileName.c_str(), std::ios::binary | std::ios::in);
@@ -577,7 +577,7 @@ AnalyzeObjectLabelMapImageIO
 
   ::Write(const void * buffer)
 {
-  if (this->GetComponentType() != UCHAR)
+  if (this->GetComponentType() != IOComponentEnum::UCHAR)
   {
     std::cerr << "Error: The pixel type needs to be an unsigned char." << std::endl;
     exit(-1);
