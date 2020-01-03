@@ -127,22 +127,22 @@ typename TRGBImage::Pointer AnalyzeObjectMap<TImage, TRGBImage>::ObjectMapToRGBI
 // are not speficied the default values
 // are 0.
 template <class TImage, class TRGBImage>
-void AnalyzeObjectMap<TImage, TRGBImage>::AddObjectEntryBasedOnImagePixel(ImageType *Image, const int value,
+void AnalyzeObjectMap<TImage, TRGBImage>::AddObjectEntryBasedOnImagePixel(ImageType *inImage, const int value,
                                                                           const std::string ObjectName, const int Red,
                                                                           const int Green, const int Blue)
 {
   itk::ImageRegion<TImage::ImageDimension> ObjectMapRegion = this->GetLargestPossibleRegion();
-  itk::ImageRegion<TImage::ImageDimension> ImageRegion = Image->GetLargestPossibleRegion();
+  itk::ImageRegion<TImage::ImageDimension> ImageRegion = inImage->GetLargestPossibleRegion();
 
   if(  ImageRegion != ObjectMapRegion )
     {
-    this->SetRegions(Image->GetLargestPossibleRegion() );
+    this->SetRegions(inImage->GetLargestPossibleRegion() );
     this->Allocate();
     this->FillBuffer(0);
     }
-  itk::ImageRegionIterator<ImageType> indexImage(Image, Image->GetLargestPossibleRegion() );
+  itk::ImageRegionIterator<ImageType> indexImage(inImage, inImage->GetLargestPossibleRegion() );
 
-  itk::ImageRegionIterator<ImageType> indexObjectMap(this, Image->GetLargestPossibleRegion() );
+  itk::ImageRegionIterator<ImageType> indexObjectMap(this, inImage->GetLargestPossibleRegion() );
 
   this->AddAnalyzeObjectEntry(ObjectName);
   unsigned int i = this->GetNumberOfObjects() - 1;

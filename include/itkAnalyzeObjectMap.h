@@ -123,7 +123,7 @@ public:
    *inputs and then create an object map at the location that it finds the specific pixel value.
    The user will also have the option of inputing the red, green and blue they want the object map to be.
    */
-  void AddObjectEntryBasedOnImagePixel(ImageType *Image, const int value = -1, const std::string ObjectName = "",
+  void AddObjectEntryBasedOnImagePixel(ImageType *image, const int value = -1, const std::string ObjectName = "",
                                        const int Red = 0, const int Green = 0, const int Blue = 0);
 
   /**
