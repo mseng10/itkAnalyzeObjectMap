@@ -63,8 +63,8 @@ protected:
   void PrintSelf(std::ostream& os, Indent indent) const override;
 
 private:
-  AnalyzeObjectLabelMapImageIOFactory(const Self &); // purposely not implemented
-  void operator=(const Self &);                      // purposely not implemented
+  AnalyzeObjectLabelMapImageIOFactory(const Self &) = delete; // purposely not implemented
+  void operator=(const Self &) = delete;                      // purposely not implemented
 
 };
 
