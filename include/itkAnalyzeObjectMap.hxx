@@ -54,7 +54,7 @@ AnalyzeObjectMap<TImage, TRGBImage>
 
 template <class TImage, class TRGBImage>
 AnalyzeObjectMap<TImage, TRGBImage>
-::~AnalyzeObjectMap( void )
+::~AnalyzeObjectMap( )
 = default;
 
 template <class TImage, class TRGBImage>

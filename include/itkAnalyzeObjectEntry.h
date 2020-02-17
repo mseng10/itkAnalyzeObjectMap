@@ -69,7 +69,7 @@ public:
    * defined name for this object. Any zero-terminated string can be used,
    * including stringswith embedded spaces.
    */
-  virtual std::string GetName( void ) const
+  virtual std::string GetName( ) const
   {
     itkDebugMacro("returning " << "Name of " << this->m_Name );
     return std::string(this->m_Name);
@@ -551,7 +551,7 @@ protected:
    * Possible Causes of Failure:
    * - unknown
    */
-  AnalyzeObjectEntry( void );
+  AnalyzeObjectEntry( );
 
   /**
    * \brief ~AnalyzeObjectEntry( void ) is the destructor, which does nothing explicitly due to
@@ -560,7 +560,7 @@ protected:
    * - unknown
    * \sa AnalyzeObjectEntry
    */
-  ~AnalyzeObjectEntry( void ) override;
+  ~AnalyzeObjectEntry( ) override;
 
   void PrintSelf(std::ostream& os, Indent indent) const override;
 
