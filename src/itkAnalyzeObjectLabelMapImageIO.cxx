@@ -48,8 +48,7 @@ AnalyzeObjectLabelMapImageIO::AnalyzeObjectLabelMapImageIO()
 }
 
 AnalyzeObjectLabelMapImageIO::~AnalyzeObjectLabelMapImageIO()
-{
-}
+= default;
 
 void AnalyzeObjectLabelMapImageIO::PrintSelf(std::ostream& os, Indent indent) const
 {

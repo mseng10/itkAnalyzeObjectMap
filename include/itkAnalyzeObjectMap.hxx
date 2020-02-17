@@ -55,8 +55,7 @@ AnalyzeObjectMap<TImage, TRGBImage>
 template <class TImage, class TRGBImage>
 AnalyzeObjectMap<TImage, TRGBImage>
 ::~AnalyzeObjectMap( void )
-{
-}
+= default;
 
 template <class TImage, class TRGBImage>
 AnalyzeObjectEntryArrayType *AnalyzeObjectMap<TImage, TRGBImage>::GetAnalyzeObjectEntryArrayPointer()

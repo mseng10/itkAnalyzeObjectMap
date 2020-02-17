@@ -20,8 +20,7 @@ namespace itk
 {
 
 AnalyzeObjectEntry::~AnalyzeObjectEntry( )
-{
-}
+= default;
 
 AnalyzeObjectEntry::AnalyzeObjectEntry( ) : m_DisplayFlag(1),
                                                  m_CopyFlag(0),
