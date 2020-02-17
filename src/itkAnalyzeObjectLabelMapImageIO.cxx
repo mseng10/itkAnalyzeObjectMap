@@ -453,7 +453,7 @@ void AnalyzeObjectLabelMapImageIO::ReadImageInformation()
  */
 void
 AnalyzeObjectLabelMapImageIO
-::WriteImageInformation(void)
+::WriteImageInformation()
 {
   itkDebugMacro(<< "I am in the writeimageinformaton" << std::endl);
   std::string tempfilename = this->GetFileName();
