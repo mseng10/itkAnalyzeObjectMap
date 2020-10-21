@@ -13,7 +13,7 @@ except ImportError:
 
 setup(
     name='itk-analyzeobjectmapiO',
-    version='5.1.0',
+    version='5.1.1',
     author='Hans J. Johnson',
     author_email='hans-johnson@uiowa.edu',
     packages=['itk'],
@@ -45,6 +45,6 @@ setup(
     keywords='ITK InsightToolkit AnalyzeObjectMap',
     url=r'https://github.com/InsightSoftwareConsortium/itkAnalyzeObjectMap',
     install_requires=[
-        r'itk>=5.1.0.post2'
+        r'itk>=5.1.1'
     ]
     )
